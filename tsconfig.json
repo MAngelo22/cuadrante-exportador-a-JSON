@@ -1,29 +1,31 @@
 {
   "compilerOptions": {
-    "target": "esnext", // Usa un objetivo moderno de JavaScript
-    "module": "esnext", // Módulo ES6
-    "moduleResolution": "node", // Resolución de módulos al estilo Node
-    "jsx": "react-jsx", // Configuración necesaria para React 17+ (sin importar React)
-    "strict": true, // Enciende el modo estricto para mayor seguridad en los tipos
-    "esModuleInterop": true, // Asegura la compatibilidad con importaciones de módulos de CommonJS
-    "skipLibCheck": true, // Omite la verificación de tipos en los archivos de biblioteca
-    "baseUrl": ".", // Define la raíz del proyecto
+    "target": "esnext",                    // Usa un objetivo moderno de JavaScript
+    "module": "esnext",                    // Módulo ES6
+    "moduleResolution": "node",            // Resolución de módulos al estilo Node
+    "jsx": "react-jsx",                    // Configuración necesaria para React 17+ (sin importar React)
+    "strict": true,                        // Enciende el modo estricto para mayor seguridad en los tipos
+    "esModuleInterop": true,               // Asegura la compatibilidad con importaciones de módulos de CommonJS
+    "skipLibCheck": true,                  // Omite la verificación de tipos en los archivos de biblioteca
+    "baseUrl": ".",                        // Define la raíz del proyecto
     "paths": {
-      "@/*": ["./src/*"] // Mapea el alias '@' a la carpeta src
+      "@/*": ["./src/*"]                   // Mapea el alias '@' a la carpeta src
     },
-    "resolveJsonModule": true, // Permite importar archivos .json como módulos
-    "allowJs": true, // Permite que los archivos .js se compilen junto con los archivos .ts/.tsx
-    "noEmit": true // No genera archivos de salida, ya que estamos usando Vite
+    "resolveJsonModule": true,             // Permite importar archivos .json como módulos
+    "allowJs": true,                       // Permite que los archivos .js se compilen junto con los archivos .ts/.tsx
+    "noEmit": true,                        // No genera archivos de salida, ya que estamos usando Vite
+    "noUnusedLocals": false,               // Desactiva la verificación de variables no usadas
+    "noUnusedParameters": false            // Desactiva la verificación de parámetros no usados
   },
   "include": [
-    "src" // Asegura que la carpeta 'src' esté incluida en la compilación
+    "src"                                  // Asegura que la carpeta 'src' esté incluida en la compilación
   ],
   "exclude": [
-    "node_modules", // Excluye la carpeta 'node_modules' de la compilación
-    "dist" // Excluye la carpeta 'dist' si ya se genera el código final allí
+    "node_modules",                        // Excluye la carpeta 'node_modules' de la compilación
+    "dist"                                 // Excluye la carpeta 'dist' si ya se genera el código final allí
   ],
   "references": [
-    { "path": "./tsconfig.app.json" }, // Referencia al archivo 'tsconfig.app.json' si lo tienes
-    { "path": "./tsconfig.node.json" } // Referencia al archivo 'tsconfig.node.json' si lo tienes
+    { "path": "./tsconfig.app.json" },     // Referencia al archivo 'tsconfig.app.json' si lo tienes
+    { "path": "./tsconfig.node.json" }     // Referencia al archivo 'tsconfig.node.json' si lo tienes
   ]
 }
